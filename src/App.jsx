@@ -1,29 +1,27 @@
 import React from 'react'
-
+import { Navbar } from './component/Navbar'
+import { Hero } from './component/Hero'
+import { HomeComponent } from './component/HomeComponent'
+import JobListing from './component/JobListing'
 const App = () => {
-const name ='Aryan Singh'
-const a= 12
-const b =45
-const login = true
-const name1 =['sam', 'karan','pintu','mohit','sara']
-
-
-
   return (
     <>
+   
+    <Navbar/> 
+   
+   <Hero/>
+   
+   <HomeComponent/>
+   
+    <JobListing/>
 
-    <div className='text-5xl'>App {name}</div><br />
-
-    <p style={{color:'red',fontSize:'24px'}}>The Sum of {a} and {b} is {a+b} </p>
-
-    <ul>
-      {name1.map((name , index)=> (
-        <li key={index}>{name}</li>
-      ))}
-    </ul>
-
-        {login ? <h1>Hello {name}</h1>:<h1>Hello guest</h1>}
-
+    <section className="m-auto max-w-lg my-10 px-6">
+      <a
+        href="jobs.html"
+        className="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700"
+        >View All Jobs</a
+      >
+    </section>
     </>
   )
 }
